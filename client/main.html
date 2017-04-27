@@ -1,0 +1,25 @@
+<head>
+  <title>Observe</title>
+</head>
+
+<body>
+  {{>ajouterTache}}
+  {{>listerTache}}
+</body>
+
+<template name="ajouterTache">
+  <form>
+    Nouvelle tâche:
+    <input type="text" name="tache" />
+    <br />
+    <input type="submit" value="Ajouter" />
+  </form>
+</template>
+
+<template name="listerTache">
+  {{#each taches}}
+    {{nom}}<br />
+  {{else}}
+    Vous n'aviez rien à faire :)
+  {{/each}}
+</template>
